@@ -1,33 +1,71 @@
-### Supermarket-Sales-Predictor
-Predict total sales for SuperKart’s outlets to guide business strategy, optimize inventory, and support sales operations across different city tiers.
+# SuperKart-Sales-Prediction
 
-### Dataset:
-Includes product attributes (Product_Type, Product_MRP, Product_Sugar_Content) and store characteristics (Store_Size, Store_Location_City_Type) to predict Product_Store_Sales_Total.
+Developed a regression-based predictive model to forecast product-level sales across SuperKart stores and provide strategic recommendations for business growth and inventory management.
 
-## Methods and Workflow:
+## Project Overview
 
-### Exploratory Analysis:
-- Identified OUT004 as the top-performing store (Tier 2 city, medium size).
-- Discovered that fruits, vegetables, and snack foods are top revenue generators.
+This project forecasts product sales at SuperKart supermarkets to support business decisions on expansion, inventory management, and marketing strategies across stores in different city tiers.
 
-### Feature Engineering:
-- Added Store_Age_Years.
-- Grouped products into Perishables and Non-Perishables.
+## Dataset
 
-### Modeling:
-- Built and refined linear regression models using Ordinary Least Squares (OLS).
-- Removed insignificant variables based on p-values and checked multicollinearity using VIF.
+- Product-level sales records across multiple stores with features such as:
+  - Product types
+  - Maximum Retail Price (MRP)
+  - Store size
+  - City tier
+  - Product sugar content
+  - Store establishment year
 
-### Validated assumptions: 
-- residual normality,
-- homoscedasticity, and
-- linearity.
+## Objectives
 
-### Model Performance:
-- Achieved ~79% R² explaining sales variance.
-- Applied 10-fold cross-validation to confirm model stability.
+- Predict quarterly sales for products at various stores.
+- Identify key factors driving sales performance.
+- Recommend strategies to optimize store operations.
 
-### Insights and Recommendations:
-- Scale successful stores (like OUT004) and optimize underperformers (like OUT001).
-- Maintain stock for high-revenue categories (fruits, vegetables, snacks).
-- Consider demographic data and seasonal trends for future enhancements.
+## Methods
+
+- Exploratory Data Analysis (EDA).
+- Feature engineering, including **store age** and **perishability categories**.
+- Linear regression modeling using **Ordinary Least Squares (OLS)**.
+- Multicollinearity checks with **Variance Inflation Factor (VIF)**.
+- Cross-validation for model validation.
+
+## Results
+
+- Achieved an **R² of approximately 79%** on validation data.
+- Identified top-performing stores and product categories.
+- Recommended scaling successful stores and improving underperformers.
+- Suggested inventory prioritization for high-revenue products.
+
+## Business Impact
+
+- Informed store expansion decisions.
+- Improved marketing strategies for underperforming locations.
+- Optimized inventory of high-demand products.
+
+## Technologies Used
+
+- Python
+- Pandas
+- Statsmodels
+- Scikit-learn
+- Matplotlib
+
+## How to Run
+
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/yourusername/superkart-sales-prediction.git
+    ```
+
+2. Install required dependencies:
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+3. Launch Jupyter Notebook:
+    ```bash
+    jupyter notebook
+    ```
+
+4. Open and run the notebook to reproduce the results.
